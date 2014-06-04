@@ -13,12 +13,11 @@ RequirePackage('aas_support');
 DefMacro('\etal', '\emph{et al.\/}');
 DefMacro('\firstsection', '');	# removes some space above this command
 
-DefMacro('\jname{}', '\@add@frontmatter{ltx:journal}{#1}');
-DefMacro('\pubyear{}', '\@add@frontmatter{ltx:year_published}{#1}');
-DefMacro('\editors{}', '\@add@frontmatter{ltx:editors}{#1}');
-DefMacro('\affiliation{}', '\@add@frontmatter{ltx:affiliation}{#1}');
-
-=for commentedout
+DefMacro('\jname{}', '\@add@frontmatter{journal}{#1}');
+#DefMacro('\pubyear{}', '\@add@frontmatter{ltx:year_published}{#1}');
+DefMacro('\pubyear{}', '\@add@frontmatter{ltx:date}[role=published]{#1}');
+DefMacro('\editors{}', '\@add@frontmatter{editors}{#1}');
+DefMacro('\affiliation{}', '\@add@frontmatter{affiliation}{#1}');
 
 DefConstructor('\keywords{}',
 		"<keywords>#1</keywords>", mode => 'text');
@@ -32,11 +31,10 @@ DefMacro('\title[]{}', '\ifx.#1.\else\@add@frontmatter{ltx:toctitle}{#1}\fi
 
 DefMacro('\volume{}', '\@add@frontmatter{ltx:volume}{#1}');
 
-=cut
 
 ### TODO ####
 # \author rendered incorrectly
-DefMacro('\pagerange{}', '\@add@frontmatter{ltx:pagerange}{#1}');	# rendered incorrectly
+DefMacro('\pagerange{}', '\@add@frontmatter{pagerange}{#1}');	# rendered incorrectly
 
 
 ####

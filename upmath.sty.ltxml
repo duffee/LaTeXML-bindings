@@ -1,0 +1,44 @@
+# -*- CPERL -*-
+# /=====================================================================\ #
+# |  upmath                                                             | #
+# | Implementation for LaTeXML - cribbed from upgreek                   | #
+# |=====================================================================| #
+# | Part of LaTeXML:                                                    | #
+# |  Public domain software, produced as part of work done by the       | #
+# |  United States Government & not subject to copyright in the US.     | #
+# |---------------------------------------------------------------------| #
+# | Bruce Miller <bruce.miller@nist.gov>                        #_#     | #
+# | http://dlmf.nist.gov/LaTeXML/                              (o o)    | #
+# \=========================================================ooo==U==ooo=/ #
+package LaTeXML::Package::Pool;
+use strict;
+use warnings;
+use LaTeXML::Package;
+
+DefMathI('\ualpha',   undef, "\x{03B1}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\ubeta',    undef, "\x{03B2}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\ugamma',   undef, "\x{03B3}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\udelta',   undef, "\x{03B4}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uepsilon', undef, "\x{03F5}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uzeta',    undef, "\x{03B6}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\ueta',     undef, "\x{03B7}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\utheta',   undef, "\x{03B8}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uiota',    undef, "\x{03B9}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\ukappa',   undef, "\x{03BA}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\ulambda',  undef, "\x{03BB}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\umu',      undef, "\x{03BC}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\unu',      undef, "\x{03BD}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uxi',      undef, "\x{03BE}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\upi',      undef, "\x{03C0}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\urho',     undef, "\x{03C1}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\usigma',   undef, "\x{03C3}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\utau',     undef, "\x{03C4}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uupsilon', undef, "\x{03C5}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uphi',     undef, "\x{03D5}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uchi',     undef, "\x{03C7}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\upsi',     undef, "\x{03C8}", font => { shape => 'upright', forceshape => 1 });
+DefMathI('\uomega',   undef, "\x{03C9}", font => { shape => 'upright', forceshape => 1 });
+
+#Let('\upvarsigma', '\upsigma');
+
+1;

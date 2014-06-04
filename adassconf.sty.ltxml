@@ -1,0 +1,19 @@
+# Boyd Duffee, June 2014
+# LaTeXML binding for adassconf.sty found in arXiv
+#
+# NB:  I'm only implementing enough to fix my thesis problems
+# YMMV - released under the same terms as Perl itself.
+#
+# used in arxiv:0808.3425
+
+use LaTeXML::Package;
+use strict;
+
+#### this could be more intricate as the proceedings request
+# Separate topics from sub-topics with an exclamation point (!).
+
+DefConstructor('\keywords{}',
+		"<keywords>#1</keywords>", mode => 'text');
+
+####
+'Perl is my Igor';	# This is _more_ true than 1!

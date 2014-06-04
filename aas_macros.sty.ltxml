@@ -1,0 +1,7 @@
+# aas_macros is close enough to aas_support
+# Boyd Duffee, 2014 - Artistic Licence
+# suggested by Bruce Miller
+
+RequirePackage("aas_support");
+
+# missing \author[]{} definition

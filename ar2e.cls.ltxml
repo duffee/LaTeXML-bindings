@@ -1,0 +1,14 @@
+# Boyd Duffee, June 2014
+# LaTeXML binding for ar2e.cls found in arXiv
+#
+# NB:  I'm only implementing enough to fix my thesis problems
+# YMMV - released under the same terms as Perl itself.
+
+use LaTeXML::Package;
+use strict;
+
+DefEnvironment('{keyword}',
+	'<ltx:keywords>#body</ltx:keywords>' );
+
+####
+'Perl is my Igor';	# This is _more_ true than 1!

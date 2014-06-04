@@ -1,0 +1,18 @@
+# Boyd Duffee, June 2014
+# LaTeXML binding for pasj00.cls found in arXiv
+#
+# NB:  I'm only implementing enough to fix my thesis problems
+# YMMV - released under the same terms as Perl itself.
+
+use LaTeXML::Package;
+use strict;
+
+# Is case sensitive?
+DefConstructor('\keywords{}',
+		"<keywords>#1</keywords>", mode => 'text');
+DefConstructor('\KeyWords{}',
+		"<keywords>#1</keywords>", mode => 'text');
+
+
+####
+'Perl is my Igor';	# This is _more_ true than 1!

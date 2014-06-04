@@ -1,0 +1,19 @@
+# Boyd Duffee, June 2014
+# LaTeXML binding for ptptex.cls found in arXiv
+#
+# NB:  I'm only implementing enough to fix my thesis problems
+# YMMV - released under the same terms as Perl itself.
+
+use LaTeXML::Package;
+use strict;
+
+#DefEnvironment('{acknowledgments}',
+#		'<ltx:acknowledgments>#body</ltx:acknowledgments>');
+
+# Thanks to Bruce for this one.  Couldn't find it in the manual.
+DefMacro('\abst{}', '\@add@frontmatter{ltx:abstract}{#1}');
+DefMacro('\inst{}', '\@add@frontmatter{ltx:institution}{#1}');
+
+
+####
+'Perl is my Igor';	# This is _more_ true than 1!

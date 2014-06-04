@@ -1,0 +1,23 @@
+#  /====================================================================\
+# | elsart5p.cls for LaTeXML                                             |
+# | copied from elsart3p.cls and mangled by Boyd, 2014
+#  >====================================================================<
+# | Released to public domain.                                           |
+# | Bruce Miller <bruce.miller@nist.gov>                                 |
+# | http://dlmf.nist.gov/LaTeXML/                                        |
+#  \====================================================================/
+use strict;
+use LaTeXML::Package;
+
+LoadClass('elsart5',withoptions=>1);
+# No effect from elsart5.cls
+
+DefEnvironment('{keyword}',
+	'<ltx:keywords>#body</ltx:keywords>' );
+####
+# arxiv_0810.0423 declares its keywords in an environment with keywords
+# separated by \sep defined in elsart.cls as {\unskip,} 
+# how would you render this in xml as a list of keywords?
+####
+
+1;

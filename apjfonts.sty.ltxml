@@ -1,0 +1,17 @@
+# apjfonts.sty says that it is often used as \usepackage{emulateapj,timesfonts}
+# Boyd Duffee, 2014 - Artistic Licence
+
+# copied from emulateapj.sty.ltxml by Bruce Miller
+
+package LaTeXML::Package::Pool;
+use strict;
+use warnings;
+use LaTeXML::Package;
+
+#**********************************************************************
+# Seems to be equivalent.
+RequirePackage('aastex', withoptions => 1);
+
+# #======================================================================
+1;
+

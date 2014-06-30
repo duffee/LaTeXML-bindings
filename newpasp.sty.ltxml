@@ -1,0 +1,84 @@
+# Boyd Duffee, June 2014
+# LaTeXML binding for newpasp.sty found in arXiv
+#
+# NB:  I'm only implementing enough to fix my thesis problems
+# YMMV - released under the same terms as Perl itself.
+
+use LaTeXML::Package;
+use strict;
+
+LoadClass('article');
+RequirePackage('aas_support');
+RequirePackage('epsf');
+RequirePackage('amssymb');
+
+#DefMacro('\sun', '$\odot$');	# this character in is unicode \x{2609}
+DefPrimitiveI('\sun',     undef, "\x{2609}");
+#DefMacro('\earth', '$\oplus$');	# this character in is unicode \x{2295}
+DefPrimitiveI('\earth',   undef, "\x{2295}");
+DefMacro('\arcmin', '$^\prime$');
+DefMacro('\arcsec', '$^{\prime\prime}$');
+DefMacro('\micron', '$\mu$');
+
+#### journal styles are in roman
+DefMacro('\aj', '\rm{AJ}');
+DefMacro('\apj', '\rm{ApJ}');
+DefMacro('\apjl', '\rm{ApJ}');
+DefMacro('\aap', '\rm{A\&A}');
+DefMacro('\aapr', '\rm{A\&A~Rev.}');
+DefMacro('\araa', '\rm{ARA\&A}');
+DefMacro('\astap', '\rm{A\&A}');
+DefMacro('\mnras', '\rm{MNRAS}');
+DefMacro('\nat', '\rm{Nat}');
+DefMacro('\pasp', '\rm{PASP}');
+DefMacro('\pra', '\rm{Phys.Rev.A}');
+DefMacro('\prb', '\rm{Phys.Rev.B}');
+DefMacro('\prc', '\rm{Phys.Rev.C}');
+DefMacro('\prd', '\rm{Phys.Rev.D}');
+DefMacro('\prl', '\rm{Phys.Rev.Lett}');
+
+#### from Advanced AMS binary symbols
+DefMacro('\ga', '\gtrsim');
+DefMacro('\la', '\lesssim');
+
+
+DefMacro('\affil{}', '\@add@frontmatter{affiliation}{#1}');
+DefMacro('\altaffilmark{}', '$^{#1}$');
+DefMacro('\reference', '');	# just a spacing command, but I'd like to wrap it into an xml tag
+DefEnvironment('{references}',
+		'<ltx:references>#body</ltx:references>');
+
+DefConstructor('\keywords{}',
+		"<keywords>#1</keywords>", mode => 'text');
+
+DefMacro('\plotone{}', '\epsfbox{#1}');
+DefMacro('\plottwo{}{}', '\epsfbox{#1}\hfil\epsfbox{#2}');
+DefMacro('\plotfiddle{}', '\special{psfile=#1}');
+
+
+#### these are from iaus.cls.ltxml
+#DefMacro('\etal', '\emph{et al.\/}');
+#DefMacro('\firstsection', '');	# removes some space above this command
+
+#DefMacro('\jname{}', '\@add@frontmatter{journal}{#1}');
+#DefMacro('\pubyear{}', '\@add@frontmatter{ltx:year_published}{#1}');
+#DefMacro('\pubyear{}', '\@add@frontmatter{ltx:date}[role=published]{#1}');
+#DefMacro('\editors{}', '\@add@frontmatter{editors}{#1}');
+
+DefEnvironment('{acknowledgments}',
+		'<ltx:acknowledgments>#body</ltx:acknowledgments>');
+
+# Thanks to Bruce for this one.  Couldn't find it in the manual.
+#DefMacro('\title[]{}', '\ifx.#1.\else\@add@frontmatter{ltx:toctitle}{#1}\fi
+#  \@add@frontmatter{ltx:title}{#2}');
+#
+#DefMacro('\volume{}', '\@add@frontmatter{ltx:volume}{#1}');
+
+
+### TODO ####
+# \author rendered incorrectly
+#DefMacro('\pagerange{}', '\@add@frontmatter{pagerange}{#1}');	# rendered incorrectly
+
+
+####
+'Perl is my Igor';	# This is _more_ true than 1!

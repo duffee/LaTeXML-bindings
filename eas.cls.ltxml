@@ -1,0 +1,16 @@
+# Boyd Duffee, May 2014
+# LaTeXML binding for eas.cls found in arXiv
+#
+# NB:  I'm only implementing enough to fix my thesis problems
+# YMMV
+
+use LaTeXML::Package;
+use strict;
+
+DefMacro('\cf', '\emph{cf.\/}');
+DefMacro('\etal', '\emph{et al.\/}');
+
+DefConstructor('\address{}',
+		"<address>#1</address>", mode => 'text');
+####
+'Perl is my Igor';	# This is _more_ true than 1!

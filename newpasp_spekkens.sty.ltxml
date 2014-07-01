@@ -1,4 +1,4 @@
-# mynewpasp.sty.ltxml is probably close to the newpasp.sty I've created
+# newpasp_spekkens.sty is probably close to the newpasp.sty I've created
 # Boyd Duffee, 2014 - Artistic Licence
 
 RequirePackage("newpasp");

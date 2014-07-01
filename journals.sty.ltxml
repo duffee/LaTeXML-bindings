@@ -1,0 +1,17 @@
+# -*- CPERL -*-
+# /=======================================================\ #
+# |  JHEP<variants>.cls - Implementation for LaTeXML      | #
+# |                                                       | #
+# |=======================================================| #
+# |  for arXMLiv                                          | #
+# | Released under public domain                          | #
+# \=======================================================/ #
+
+#### journals.sty has been created from JHEP3.cls, hence copied from jhep.cls.ltxml - Boyd, July 2014
+
+use LaTeXML::Package;
+use strict;
+LoadClass("JHEP3", withoptions=>1);
+
+#**********************************************************************
+1;

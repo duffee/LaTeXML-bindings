@@ -3,3 +3,4 @@
 
 RequirePackage("newpasp");
 
+'Perl is my Igor';	# This is _more_ true than 1!

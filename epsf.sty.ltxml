@@ -57,7 +57,7 @@ DefConstructor('\epsfbox[] Semiverbatim', sub {
 Let('\epsfgetlitbb', '\epsfbox');
 Let('\epsfnormal',   '\epsfbox');
 Let('\epsffile',     '\epsfbox');
-#Let('\epsffileline',     '\epsfbox');	# Fatal error token T_CS[\epsffileline] is not defined
+Let('\epsffileline',     '\epsfbox');	# Fatal error token T_CS[\epsffileline] is not defined
 
 DefPrimitive('\epsfgetbb Semiverbatim', undef);
 DefPrimitive('\epsfframe',              undef);    # Ignore (?), and process the arg.

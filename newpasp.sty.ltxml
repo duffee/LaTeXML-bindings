@@ -12,13 +12,13 @@ RequirePackage('aas_support');
 RequirePackage('epsf');
 RequirePackage('amssymb');
 
-#DefMacro('\sun', '$\odot$');	# this character in is unicode \x{2609}
+#DefMacro('\sun', '\odot$');	# this character in is unicode \x{2609}
 DefPrimitiveI('\sun',     undef, "\x{2609}");
 #DefMacro('\earth', '$\oplus$');	# this character in is unicode \x{2295}
 DefPrimitiveI('\earth',   undef, "\x{2295}");
-DefMacro('\arcmin', '$^\prime$');
-DefMacro('\arcsec', '$^{\prime\prime}$');
-DefMacro('\micron', '$\mu$');
+DefMacro('\arcmin', '\ensuremath{^\prime}');
+DefMacro('\arcsec', '\ensuremath{^{\prime\prime}}');
+DefMacro('\micron', '\ensuremath{\mu}');
 
 #### journal styles are in roman
 DefMacro('\aj', '\rm{AJ}');
